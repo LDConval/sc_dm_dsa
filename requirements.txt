@@ -1,0 +1,4 @@
+pyautogui
+pydirectinput
+flask
+pywin32
