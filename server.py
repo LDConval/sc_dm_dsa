@@ -59,19 +59,6 @@ def commentary():
         pass
     return "OK"
 
-def gen():
-    while True:
-        screenShotImg = pyautogui.screenshot()
-        screenShotImg.resize((960, 540))
-
-        imgByteArr = io.BytesIO()
-        screenShotImg.save(imgByteArr, format='JPEG')
-        yield (b'--frame\r\n Content-Type: image/jpeg\r\n\r\n' + imgByteArr.getvalue())
-
-@app.route('/video_feed')
-def video_feed():
-    return Response(gen(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
 if __name__ == '__main__':
     import socket
     local_ip = socket.gethostbyname(socket.gethostname())

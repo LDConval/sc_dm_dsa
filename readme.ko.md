@@ -7,6 +7,8 @@
 ## 사용 방법
 
 - 먼저 Python 3과 ```requirements.txt```에 종속성을 설치합니다.
+- [OBS Studio](https://obsproject.com/download)와 [smart_rtmpd](https://github.com/superconvert/smart_rtmpd)를 설치하여 스타크래프트 스트리밍을 설정합니다(HTTP 포트 8080).
+- OBS에서 ```server = rtmp://<귀하의 IP>:1935/live``` 및 ```stream_key = starcraft```를 설정하세요.
 - 스타크래프트에 들어가 LAN에서 지도([EN] DS_StreamComments.scx)를 시작하고 관찰자 슬롯으로 이동합니다.
 - ```V```를 눌러 게임에서 카메라를 잠근 다음 전체 영역이 보일 때까지 마우스 휠을 통해 확대/축소를 조정합니다.
 - ```python server.py```를 실행하여 서버를 시작합니다.
@@ -15,8 +17,6 @@
 
 ## 메모
 
-이 데모에서 호스팅되는 라이브 스트림은 ```pyautogui```의 스크린샷으로 생성되므로 실제 스트리밍에는 비효율적입니다.
+여기의 라이브 스트리밍 서비스는 데모용으로만 사용됩니다.
 
-실제 사용 사례에서는 OBS와 같은 실제 스트리밍 소프트웨어를 사용하십시오.
-
-또한 스트리밍 플랫폼의 API를 참조하여 라이브 댓글에 액세스하십시오.
+스트리밍 플랫폼에서 사용하려면 라이브 댓글에 액세스하기 위해 해당 API를 참조하십시오.
